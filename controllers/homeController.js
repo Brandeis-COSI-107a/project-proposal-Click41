@@ -8,7 +8,7 @@ const encryptData = async (plaintext) => {
   try {
     const params = {
       KeyId: 'your-cmk-id', // change this when have CMK ID or alias
-      Plaintext: Buffer.from(plaintext) // Data to encrypt
+      Plaintext: Buffer.from(plaintext) // Data to be encrypted
     };
 
     const { CiphertextBlob } = await kms.encrypt(params).promise();
